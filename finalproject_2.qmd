@@ -1,0 +1,161 @@
+---
+title: "COVID-19, Informality, and Multidimensional Poverty in Paraguay"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-tools: true
+    self-contained: true
+  pdf: default
+editor: visual
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+# Introduction
+
+Understanding how the COVID-19 pandemic affected poverty in Paraguay requires moving beyond income-based definitions and toward a multidimensional perspective. The pandemic triggered economic shocks that were not evenly distributed, particularly in countries like Paraguay, where labor informality and geographic disparities have long shaped inequality (@gasparini2011inequality). In response, the government introduced emergency cash transfer programs such as Pytyvõ, which aimed to protect informal workers and low-income families. However, whether such efforts reached the most structurally vulnerable households—especially those who were not income-poor but still deprived across multiple dimensions—remains an open question.
+
+Paraguay’s 2021 Multidimensional Poverty Index (MPI) report confirms that poverty declined during the pandemic period, even in 2020 and 2021. However, this national trend conceals persistent disparities: MPI incidence was 40.94% among rural households and only 8.98% among urban ones in 2021. Similarly, households without pension affiliation—a proxy for informality—were consistently more likely to be multidimensionally poor. Although both groups experienced reductions in MPI over time, the rate of decline was slower, suggesting an unequal recovery (INE, 2021). These patterns mirror findings elsewhere in Latin America, where rural households and informal workers were disproportionately exposed to the economic effects of the pandemic and benefitted less from social protection measures (@amarante2021covid; @egger2021falling).
+
+I build on this literature by investigating whether the slower reductions in poverty observed in these groups reflect differential causal impacts of COVID-19, rather than just long-term trends. My research question is: Did the COVID-19 pandemic and the associated policy responses exacerbate or reduce pre-existing gaps in multidimensional poverty between urban and rural households, and between formal and informal ones?
+
+Unlike prior studies that focus solely on income, I assess changes in multidimensional poverty (MPI), which captures overlapping deprivations in education, employment, housing, and health. @alkire2021global argue that MPI is especially useful in crises because it reveals forms of structural disadvantage that income measures miss—particularly among the “invisibly poor.” This is relevant in Paraguay, where Pytyvõ was designed to support informal and income-poor workers, but may have excluded households who were not income-poor before the pandemic yet faced compounded vulnerabilities.
+
+My research also builds on empirical evaluations of COVID-era policies. While @galeano2022pytyvo find that Pytyvõ increased short-term income for targeted workers, their study does not assess MPI, nor does it evaluate whether the program reached those most deprived along non-monetary dimensions. Similarly, @lustig2021lockdowns find that pandemic-related income losses were greatest for informal workers across Latin America, but highlight the difficulty of designing emergency programs that effectively target the most vulnerable. Other work suggests that urban households were more likely to access digital services and emergency transfers, contributing to an urban bias in social protection (@gentilini2020social).
+
+What makes this study distinctive is its focus on multidimensional poverty trajectories using household-level data across eight years (2016–2023). I use interaction models to estimate whether rural and informal households experienced significantly slower improvements during and after the pandemic. I also investigate the mismatch between MPI poverty and income-based targeting, showing how emergency responses may have failed to reach households who were structurally poor but not income-poor. By moving beyond descriptive statistics, I aim to contribute to causal debates on who benefitted from recovery and who was left behind.
+
+# Hypothesis
+
+Although national MPI rates declined during the COVID-19 period, the reduction was significantly slower for rural and informal households. Emergency programs like Pytyvõ may have mitigated short-term income losses but failed to address structural deprivation among the MPI-poor—particularly among those not previously classified as income-poor.
+
+I test this hypothesis by estimating interaction effects between year, household area, and informality to identify whether poverty trajectories diverged across these subgroups after the onset of the pandemic.
+
+# Causal Mechanism
+
+The observed decline in multidimensional poverty between 2016 and 2023, even during the pandemic years, suggests that macro-level trends masked persistent inequalities. This study posits that COVID-19 may not have reversed progress in MPI nationally, but reinforced structural disparities—particularly among rural and informal households. These households may have experienced:
+
+-   Weaker improvements due to less access to digital infrastructure, healthcare, and education continuity during lockdowns.
+-   Lower coverage by income-focused emergency programs, such as Pytyvõ, which targeted the income-poor but not necessarily the MPI-poor.
+-   Reduced resilience to shocks, given pre-existing deprivation in multiple dimensions (e.g., housing quality, access to water, child school attendance).
+
+Thus, the causal process is not one of absolute deterioration, but of relative disadvantage: structural inequality shaped who recovered quickly versus who remained behind. COVID-19 acted as an amplifier of pre-existing gaps, not a universal shock with symmetric effects.
+
+# Data and Variables
+
+I use harmonized household survey data from Paraguay’s MPI datasets (2016–2023), constructed from the fourth quarter of the EPHC. The main outcome variable is `multid_poor_26`—a binary flag for households whose deprivation score exceeds 26%. Key variables include:
+
+-   `year` — survey year
+-   `area` — 1 = urban, 2 = rural
+-   `multid_poor_26` — MPI poor household
+-   `hh_d_no_afil` — proxy for informality (1 = informal)
+-   `ing_pc` — income per capita (to filter non-poor in extensions)
+-   Household size, dependency ratio, and education of head
+
+# Summary table
+
+```{r}
+#fullmerge <- read.csv("/Users/mariaguadalupesolaecheamadeo/Library/CloudStorage/OneDrive-PennO365/merged2016-23.csv")
+#summary_df <- fullmerge %>%
+ # select(
+  #  year,
+   # area,
+    #multid_poor_26,
+  #  hh_d_no_afil,
+   # hh_d_cuantos,         
+   # dep_ratio,            
+  #  head_ed_level         
+  #) %>%
+  #summarize(
+  #  `Year (min)` = min(year, na.rm = TRUE),
+   # `Year (max)` = max(year, na.rm = TRUE),
+    #`Area (urban=1)` = mean(area, na.rm = TRUE),
+    #`MPI Poverty (mean)` = mean(multid_poor_26, na.rm = TRUE),
+    #`Informal (mean)` = mean(hh_d_no_afil, na.rm = TRUE),
+    #`Household Size (mean)` = mean(hh_d_cuantos, na.rm = TRUE),
+    #`Dependency Ratio (mean)` = mean(dep_ratio, na.rm = TRUE),
+  #  `Head Edu (mean)` = mean(head_ed_level, na.rm = TRUE)
+  #) %>%
+  #pivot_longer(cols = everything(), names_to = "Variable", values_to = "Value")
+
+#kable(summary_df, caption = "Table 1: Summary statistics for key variables used in the analysis.")
+
+
+```
+
+notice fullmerge is huge and it takes a lot of time on my computer to load, i don't know if there's a more efficient way to do this so I commented the whole section to render my html
+
+# Plots
+
+```{r}
+
+
+trend_data <- read_csv("/Users/mariaguadalupesolaecheamadeo/OneDrive - PennO365/trend_data.csv")
+
+
+ggplot(trend_data, aes(x = year, y = mpi_rate, color = area_label)) + geom_line(size = 1.2) + geom_point(size = 2) + labs( title = "Multidimensional Poverty in Paraguay (2016–2023)", x = "Year", y = "MPI Incidence (%)", color = "Area" ) + theme_minimal()
+
+
+
+area <- read.csv("/Users/mariaguadalupesolaecheamadeo/Library/CloudStorage/OneDrive-PennO365/areatrend.csv")
+
+ggplot(area, aes(x = year, y = mpi_rate, color = group)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 2) +
+  labs(title = "MPI by Area (Urban vs. Rural)", x = "Year", y = "MPI (%)", color = "Area") +
+  theme_minimal()
+
+informality <- read.csv("/Users/mariaguadalupesolaecheamadeo/Library/CloudStorage/OneDrive-PennO365/informality.csv")
+
+ggplot(informality, aes(x = year, y = mpi_rate, color = group)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 2) +
+  labs(title = "MPI by Labor Market (Formal vs. Informal)", x = "Year", y = "MPI (%)", color = "Household Type") +
+  theme_minimal()
+
+```
+
+While MPI poverty declined steadily in both rural and urban areas from 2016 to 2023, the gap between the two remained large and persistent. In 2020 and 2021—the core pandemic years—MPI levels continued to decrease, but rural households consistently exhibited poverty rates 4–5 times higher than urban ones. This suggests that national declines in MPI may obscure structural disparities, and supports the hypothesis that rural households recovered more slowly or benefitted less from emergency responses like Pytyvõ.
+
+Similarly, informal households were consistently more multidimensionally poor than formal ones throughout the period. Although both groups saw improvements, the decline in MPI for informal households was less pronounced during the COVID-19 period. This lends further support to the hypothesis that informal workers—despite being targeted by Pytyvõ—faced persistent deprivation due to structural disadvantages not addressed by short-term income support.
+
+# Empirical Strategy and Research Design
+
+To evaluate whether structural disparities in MPI reduction were amplified during and after COVID-19, I estimate the following interaction model using repeated cross-sectional data:
+
+``` math
+MPI_{it} = α + β_1 DuringCOVID_t + β_2 PostCOVID_t + β_3 Group_i + β_4 (DuringCOVID_t × Group_i) + β_5 (PostCOVID_t × Group_i) + X_{it}γ + ε_{it}
+```
+
+Where: - `MPI_{it}` is a binary variable for whether household *i* in year *t* is multidimensionally poor; - `DuringCOVID_t` equals 1 for years 2020 and 2021 (pandemic period); - `PostCOVID_t` equals 1 for years 2022 and 2023 (recovery period); - `Group_i` identifies rural households (`area == 2`) or informal ones (`hh_d_no_afil == 1`); - `β_4` and `β_5` capture how COVID-19 and its aftermath differentially affected the group; - `X_{it}` includes covariates described below; - `ε_{it}` is the error term.
+
+This specification allows for estimating not only whether the MPI poverty gap widened during the pandemic, but also whether certain groups recovered more slowly post-COVID.
+
+## Causal Interpretation and Confounders
+
+The difference-in-differences interaction term allows me to estimate whether MPI trajectories were significantly different for subgroups, conditional on covariates. A key assumption is parallel trends—MPI would have followed similar patterns in treated and control groups absent COVID. While plausible, unobserved confounders remain a concern, such as:
+
+-   Region-specific shocks (e.g., droughts)
+-   Differences in local policy implementation
+-   Reporting or measurement bias in certain MPI dimensions
+
+To mitigate these threats, I would include year and department fixed effects and conduct robustness checks.
+
+## Empirical Extension
+
+To improve causal inference, I would restrict the sample to income non-poor households and re-estimate the model. If the same group-specific differences persist among households above the poverty line, this suggests the MPI divergence is not solely driven by Pytyvõ’s targeting of the income-poor. This allows me to test whether MPI trends diverged even within relatively better-off groups, ruling out selection bias into program participation.
+
+# References
+
+-   Alkire, S., Kanagaratnam, U., & Suppa, N. (2021). The global MPI 2021. OPHI and UNDP.
+-   Amarante, V., & Colacce, M. (2021). The effects of COVID-19 on inequality and poverty in Latin America. *LIS Working Paper Series*.
+-   Egger, D., et al. (2021). Falling living standards during the COVID-19 crisis. *Science Advances*.
+-   Galeano, J. J., & Aquino, J. E. (2022). Evaluación de impacto del programa Pytyvõ. Ministerio de Hacienda.
+-   Gasparini, L., & Lustig, N. (2011). The rise and fall of income inequality in Latin America. *ECINEQ Working Paper*.
+-   Gentilini, U., et al. (2020). Social Protection and Jobs Responses to COVID-19. *World Bank*.
+-   Lustig, N., et al. (2021). The impact of COVID-19 lockdowns and social assistance. *NBER Working Paper*.
