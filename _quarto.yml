@@ -7,8 +7,10 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - finalproject_2.qmd
+        text: Home  
+      - href: finalproject_2.qmd
+      	text: Project
+      
 
 format:
   html:
