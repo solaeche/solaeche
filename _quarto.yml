@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home  
       - href: finalproject_2.qmd
-      	text: Project
+        text: Project
       
 
 format:
