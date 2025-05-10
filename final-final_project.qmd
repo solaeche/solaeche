@@ -80,7 +80,10 @@ The dataset is a merged panel of household-year surverys across eight annual wav
 This analysis is centered on program eligibility. While urban-rural differences are relevant to understanding structural inequality, they are not predictive of Pytyvõ receipt, as I had thought initially. A test of the empirical correlation between informality (`hh_d_no_afil`) and rural residence (`area`) yields only 0.087, indicating that rural households were only marginally more likely to be informal. As a result, I decided to not have rural/urban classifications as a causal proxy for program targeting.
 
 ```{r}
+#reading previously merged file with the answers from 2016-2023
 fullmerge <- read_csv("/Users/mariaguadalupesolaecheamadeo/MPI_merged_2016_2023.csv",  show_col_types = FALSE)
+
+#measuring correlation between rural and informality
 correlation_df <- na.omit(data.frame(
   informal = fullmerge$hh_d_no_afil,              # 1 if informal, 0 if formal
   rural = ifelse(fullmerge$area == 2, 1, 0)       # 1 if rural, 0 if urban
@@ -146,11 +149,14 @@ To further assess the impact of Pytyvõ on structural poverty, I restrict the sa
 # Share of MPI-poor by year and formality
 fullmerge$formal <- 1 - fullmerge$hh_d_no_afil
 
+
+#filtering out na values
 mpi_share <- fullmerge %>%
   filter(!is.na(formal)) %>%  # Remove NA values from 'formal'
   group_by(year, formal) %>%
   summarise(share_mpi_poor = mean(multid_poor_26, na.rm = TRUE)) %>%
   ungroup()
+
 
 ggplot(mpi_share, aes(x = year, y = share_mpi_poor, fill = as.factor(formal))) +
   geom_bar(stat = "identity", position = "dodge") +
@@ -173,6 +179,7 @@ ggplot(mpi_share, aes(x = year, y = share_mpi_poor, fill = as.factor(formal))) +
 
 ```{r}
 # MPI vs Income poverty
+#creating data set with means of poverty levels for each measure by year
 poverty_trends <- fullmerge %>%
   group_by(year) %>%
   summarise(
