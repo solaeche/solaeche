@@ -1,11 +1,8 @@
 ---
-title: "solaeche"
+title: "Guadalupe Solaeche"
 ---
+Hi! Hola! Welcome to my quarto website :)
 
-This is a Quarto website.
+You can find my first publication on the navigation bar. I hope you enjoy reading it! 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+And thank you prof. Springman for these past semesters, I learned a lot from you. 
