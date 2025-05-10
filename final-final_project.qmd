@@ -42,9 +42,13 @@ In designing this study, I was motivated by a central question: how does the des
 
 Theoretically, this research is grounded in the growing literature on multidimensional poverty and the limitations of income-based targeting. Traditional income poverty measures often fail to capture deeper and more persistent deprivations related to education, employment formality, housing, and access to services—factors which can shape long-term vulnerability even if income is temporarily above a threshold [@ophi2021; @bastagli2016]. Informal workers, in particular, often fall into this category of “structurally poor,” experiencing multiple deprivations despite sometimes being classified as non-poor in income terms [@handa2020; @esposito2023].
 
-Paraguay’s Pytyvõ program provides a unique empirical opportunity. Unlike most emergency relief programs that rely on income eligibility, Pytyvõ explicitly targeted informality by requiring that recipients lack affiliation with the Instituto de Previsión Social (IPS), Paraguay’s social security system [@abc2020; @lanacion2021]. This created a quasi-natural experiment where I could observe how households that were eligible for Pytyvõ (informal) fared compared to those excluded (formal), especially during the 2020–2021 COVID period.
+Paraguay’s Pytyvõ program provides a unique empirical opportunity. Unlike most emergency relief programs that rely on income eligibility, Pytyvõ explicitly targeted informality by requiring that recipients lack affiliation with the Instituto de Previsión Social (IPS), Paraguay’s social security system [@abc2020; @lanacion2021].
 
-Based on this theoretical framework and prior empirical studies showing the effectiveness of well-targeted transfers [@gentilini2020; @idb2020], I propose the following hypotheses:
+Because Pytyvõ was targeted to informal workers and not based on income, this setting provides a quasi-experimental contrast: formal households were effectively excluded from support during COVID-19, while informal ones were eligible. This institutional feature allows me to examine whether multidimensional poverty outcomes evolved differently for each group during the pandemic period [@handa2020; @esposito2023].
+
+
+I test two related hypotheses using this contrast between formal and informal households across the pre- and post-pandemic periods. The first examines relative changes in MPI between groups:
+
 
 > **Hypothesis 1 (H1):** During the COVID-19 period, formal households—who were excluded from Pytyvõ—experienced worse multidimensional poverty outcomes than informal households who received assistance.
 
@@ -128,8 +132,7 @@ Income poverty tracks MPI poverty in broad terms but differs in key periods, ill
 
 $$
 \text{MPI}_{it} = \beta_0 + \beta_1 \cdot \text{COVID}_t + \beta_2 \cdot \text{Formal}_i + \beta_3 \cdot (\text{COVID}_t \times \text{Formal}_i) + \epsilon_{it}
-$$ 
-To test my hypotheses, I estimate this logistic regression models using a binary indicator of multidimensional poverty as the dependent variable. The primary explanatory variables are informality status (1 = informal employment) and a COVID-19 period dummy (1 = years 2020–2023). The main model includes an interaction term between COVID-19 and formality, allowing me to assess whether the change in poverty during the pandemic differs across formal and informal households. Standard errors are clustered at the household level.
+$$ To test my hypotheses, I estimate this logistic regression models using a binary indicator of multidimensional poverty as the dependent variable. The primary explanatory variables are informality status (1 = informal employment) and a COVID-19 period dummy (1 = years 2020–2023). The main model includes an interaction term between COVID-19 and formality, allowing me to assess whether the change in poverty during the pandemic differs across formal and informal households. Standard errors are clustered at the household level.
 
 This interaction term is crucial for testing Hypothesis 1: that formal households (excluded from Pytyvõ) fared worse in terms of MPI during the COVID period.
 
@@ -210,12 +213,11 @@ modelsummary(model_main,
 
 Figure 1 presents the share of MPI-poor households over time, disaggregated by formality. While informal households were consistently poorer, their MPI rates declined more sharply post-2020. This descriptive pattern suggests a potential Pytyvõ effect but must be tested statistically.
 
-The regression results in Table 1 confirm that informal households had significantly higher odds of being multidimensionally poor (OR ≈ 3.01, p < 0.001), supporting Hypothesis 1. However, the interaction term between formality and the COVID-19 period was negative but statistically insignificant (p > 0.05). This means there is no clear evidence that MPI outcomes worsened more for formal households during the pandemic.
+The regression results in Table 1 confirm that informal households had significantly higher odds of being multidimensionally poor (OR ≈ 3.01, p \< 0.001), supporting Hypothesis 1. However, the interaction term between formality and the COVID-19 period was negative but statistically insignificant (p \> 0.05). This means there is no clear evidence that MPI outcomes worsened more for formal households during the pandemic.
 
 Figure 2 compares income and MPI poverty trends over time. While income poverty dropped dramatically in 2020–2021, MPI poverty fell more gradually. This discrepancy highlights the limits of income-based aid in addressing structural deprivation.
 
-Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic.
-# Empirical Extension
+Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. \# Empirical Extension
 
 ```{r}
 model_extension <- glm(multid_poor_26 ~ covid_period * hh_d_no_afil,
