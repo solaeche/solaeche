@@ -107,7 +107,7 @@ yearly_summary <- fullmerge %>%
     `Share Income Poor` = mean(pobnopoi, na.rm = TRUE)
   ) %>%
   gt() %>%
-  tab_header(title = "Summary Statistics by Year") %>%
+  tab_header(title = "Table 1: Summary Statistics by Year") %>%
   fmt_percent(
     columns = c(`Share MPI-Poor`, `Share Informal`, `Share Rural`, `Share Income Poor`),
     decimals = 1
@@ -126,11 +126,12 @@ Income poverty tracks MPI poverty in broad terms but differs in key periods, ill
 
 ### Regression Specification
 
-I estimate the following linear regression model with an interaction term to test whether formal households — who were not eligible for the Pytyvõ transfer — experienced worse MPI outcomes during the COVID policy period:
-
 $$
 \text{MPI}_{it} = \beta_0 + \beta_1 \cdot \text{COVID}_t + \beta_2 \cdot \text{Formal}_i + \beta_3 \cdot (\text{COVID}_t \times \text{Formal}_i) + \epsilon_{it}
-$$ Where: - $\text{MPI}_{it}$ is the multidimensional poverty score for household $i$ at time $t$ (M0_26). - $\text{COVID}_t$ is a binary indicator equal to 1 for the years 2020–2023 (pandemic and recovery period), and 0 otherwise. - $\text{Formal}_i$ is a binary variable equal to 1 if the household has formal employment (hh_d_no_afil = 0). - $\text{COVID}_t \times \text{Formal}_i$ is the interaction term of interest, capturing whether formal households experienced different poverty outcomes during the pandemic. - $\epsilon_{it}$ is the error term. Standard errors are clustered at the household level to adjust for repeated observations across years. The coefficient $\beta_3$ captures whether formal households — excluded from Pytyvõ — experienced differential poverty outcomes relative to their informal counterparts during the COVID period.
+$$ 
+To test my hypotheses, I estimate this logistic regression models using a binary indicator of multidimensional poverty as the dependent variable. The primary explanatory variables are informality status (1 = informal employment) and a COVID-19 period dummy (1 = years 2020–2023). The main model includes an interaction term between COVID-19 and formality, allowing me to assess whether the change in poverty during the pandemic differs across formal and informal households. Standard errors are clustered at the household level.
+
+This interaction term is crucial for testing Hypothesis 1: that formal households (excluded from Pytyvõ) fared worse in terms of MPI during the COVID period.
 
 ### Empirical Extension
 
@@ -207,14 +208,13 @@ modelsummary(model_main,
 
 ```
 
-The findings of this analysis offer mixed but valuable insights into the effect of the Pytyvõ cash transfer program on multidimensional poverty among informal households. Figure 1 shows that informal households consistently experienced higher MPI poverty rates than formal households across all years from 2016 to 2023. While both groups saw gradual declines in poverty, informal households had a steeper drop between 2020 and 2023, aligning with the period when Pytyvõ was implemented. This trend initially supports the hypothesis that targeted transfers may have improved MPI outcomes for informal households, thereby increasing the gap with formal households.
+Figure 1 presents the share of MPI-poor households over time, disaggregated by formality. While informal households were consistently poorer, their MPI rates declined more sharply post-2020. This descriptive pattern suggests a potential Pytyvõ effect but must be tested statistically.
 
-However, Figure 2 complicates this interpretation. While income poverty declined sharply between 2020 and 2023—especially for informal households—multidimensional poverty did not follow the same trajectory. Instead, MPI poverty remained relatively stable or declined only modestly, suggesting that while Pytyvõ may have alleviated income-based deprivation, it did not translate into significant improvements in broader dimensions such as education, health, or housing quality.
+The regression results in Table 1 confirm that informal households had significantly higher odds of being multidimensionally poor (OR ≈ 3.01, p < 0.001), supporting Hypothesis 1. However, the interaction term between formality and the COVID-19 period was negative but statistically insignificant (p > 0.05). This means there is no clear evidence that MPI outcomes worsened more for formal households during the pandemic.
 
-The regression model further clarifies this picture. Informality is a strong predictor of MPI poverty: informal households were over three times more likely to be MPI poor than formal households (OR ≈ 3.01, p \< 0.001). However, the interaction between informality and the COVID period is negative but statistically insignificant (β = -0.035, p \> 0.1), suggesting that Pytyvõ had no measurable effect on narrowing or widening the MPI poverty gap. This could reflect a mismatch between the policy’s income focus and the multidimensional nature of poverty.
+Figure 2 compares income and MPI poverty trends over time. While income poverty dropped dramatically in 2020–2021, MPI poverty fell more gradually. This discrepancy highlights the limits of income-based aid in addressing structural deprivation.
 
-Ultimately, while Pytyvõ likely reduced income poverty, its impact on multidimensional poverty was limited. These results support the argument that income-targeted programs may fail to address deeper structural vulnerabilities, emphasizing the need for more holistic social protection approaches.
-
+Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic.
 # Empirical Extension
 
 ```{r}
@@ -238,10 +238,10 @@ These findings reinforce the need for multidimensional targeting criteria in fut
 
 # Discussion and Policy Implications
 
-From this analysis I provide strong evidence that employment formality significantly shaped household vulnerability during the COVID-19 crisis in Paraguay. By leveraging the targeting design of the Pytyvõ cash transfer program—which prioritized informal workers regardless of income level—this study shows that formal households, excluded from assistance, were relatively worse off in terms of multidimensional poverty outcomes during the COVID-19 period. The statistically significant interaction between the COVID period and formality status suggests that exclusion from emergency transfers may have deepened structural deprivation for those not covered.
+These findings underscore the persistent structural disadvantages faced by informal households in Paraguay. The strong association between informality and multidimensional poverty supports Hypothesis 1 and reinforces existing literature: informal workers lack job security, health coverage, and stable income, leaving them more vulnerable.
 
-These results carry important implications for social protection design in contexts of widespread informality. First, they highlight the potential of using employment formality—not income—as a proxy for vulnerability, especially where income data is unreliable. However, the empirical extension, which restricted the sample to non-income-poor households, showed that informal workers remained at greater MPI risk even outside traditional income poverty. This suggests that multidimensional poverty persists beyond income thresholds and underscores the need for layered eligibility frameworks that capture structural deprivation more comprehensively.
+However, Hypothesis 2 is not supported. The interaction term between COVID-19 and formality was not statistically significant, suggesting that the pandemic did not disproportionately worsen MPI outcomes for formal vs. informal households. This could indicate that Pytyvõ provided some temporary mitigation for informal workers or that the pandemic’s impact was more evenly distributed.
 
-Second, the divergence between MPI and income poverty trends signals a broader mismatch between income-based indicators and the realities of deprivation. While income poverty steadily declined, MPI poverty remained stagnant or rose, particularly among excluded groups. This supports the use of multidimensional metrics—like housing quality, education, or access to services—in designing and evaluating policy effectiveness.
+Policy implications are twofold. First, informal employment must be addressed not only through labor formalization but by expanding coverage of social protections—such as non-contributory pensions and health insurance—to informal earners. Second, MPI indicators should complement income measures in targeting aid. As Figure 2 shows, income-based programs like Pytyvõ may miss broader deprivations that remain even when incomes rise.
 
-Future programs like Pytyvõ could improve impact by combining informality-based targeting with multidimensional screening criteria. Further research should assess the durability of these effects and interactions with other support forms, such as remittances or community aid. Enhanced documentation and transparency in MPI construction would also bolster the replicability and reliability of findings.
+In short, my findings suggest that while income transfers may buffer short-term income shocks, they are insufficient to reduce multidimensional poverty unless accompanied by deeper reforms in service access, job quality, and protection for the informal sector.
