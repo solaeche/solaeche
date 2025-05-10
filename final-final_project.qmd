@@ -8,6 +8,8 @@ format:
     self-contained: true
   pdf: default
 editor: visual
+execute:
+  warning: false
 bibliography: references.bib
 ---
 
@@ -75,7 +77,7 @@ Notably, the data show a sharp decline in MPI in 2017 followed by an increase in
 This analysis is centered on program eligibility. While urban-rural differences are relevant to understanding structural inequality, they are not predictive of Pytyvõ receipt, as I had thought initially. A test of the empirical correlation between informality (`hh_d_no_afil`) and rural residence (`area`) yields only 0.087, indicating that rural households were only marginally more likely to be informal. As a result, I decided to not have rural/urban classifications as a causal proxy for program targeting.
 
 ```{r}
-fullmerge <- read_csv("/Users/mariaguadalupesolaecheamadeo/MPI_merged_2016_2023.csv")
+fullmerge <- read_csv("/Users/mariaguadalupesolaecheamadeo/MPI_merged_2016_2023.csv",  show_col_types = FALSE)
 correlation_df <- na.omit(data.frame(
   informal = fullmerge$hh_d_no_afil,              # 1 if informal, 0 if formal
   rural = ifelse(fullmerge$area == 2, 1, 0)       # 1 if rural, 0 if urban
