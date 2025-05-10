@@ -6,9 +6,7 @@ website:
   title: "solaeche"
   navbar:
     left:
-      - href: index.qmd
-        text: Home  
-      - href: finalproject_2.qmd
+      - href: final-final_project.qmd
         text: Project
       
 

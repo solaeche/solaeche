@@ -9,7 +9,7 @@ format:
   pdf: default
 editor: visual
 bibliography: references.bib
-csl: apa.csl
+
 ---
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}

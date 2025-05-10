@@ -5,5 +5,33 @@
     "title": "solaeche",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "finalproject_2.html",
+    "href": "finalproject_2.html",
+    "title": "COVID-19, Informality, and Multidimensional Poverty in Paraguay",
+    "section": "",
+    "text": "Understanding how the COVID-19 pandemic affected poverty in Paraguay requires moving beyond income-based definitions and toward a multidimensional perspective. The pandemic triggered economic shocks that were not evenly distributed, particularly in countries like Paraguay, where labor informality and geographic disparities have long shaped inequality (Gasparini and Lustig (2011)). In response, the government introduced emergency cash transfer programs such as Pytyvõ, which aimed to protect informal workers and low-income families. However, whether such efforts reached the most structurally vulnerable households—especially those who were not income-poor but still deprived across multiple dimensions—remains an open question.\nParaguay’s 2021 Multidimensional Poverty Index (MPI) report confirms that poverty declined during the pandemic period, even in 2020 and 2021. However, this national trend conceals persistent disparities: MPI incidence was 40.94% among rural households and only 8.98% among urban ones in 2021. Similarly, households without pension affiliation—a proxy for informality—were consistently more likely to be multidimensionally poor. Although both groups experienced reductions in MPI over time, the rate of decline was slower, suggesting an unequal recovery (INE, 2021). These patterns mirror findings elsewhere in Latin America, where rural households and informal workers were disproportionately exposed to the economic effects of the pandemic and benefitted less from social protection measures (Amarante and Colacce (2021); Egger et al. (2021)).\nI build on this literature by investigating whether the slower reductions in poverty observed in these groups reflect differential causal impacts of COVID-19, rather than just long-term trends. My research question is: Did the COVID-19 pandemic and the associated policy responses exacerbate or reduce pre-existing gaps in multidimensional poverty between urban and rural households, and between formal and informal ones?\nUnlike prior studies that focus solely on income, I assess changes in multidimensional poverty (MPI), which captures overlapping deprivations in education, employment, housing, and health. Alkire, Kanagaratnam, and Suppa (2021) argue that MPI is especially useful in crises because it reveals forms of structural disadvantage that income measures miss—particularly among the “invisibly poor.” This is relevant in Paraguay, where Pytyvõ was designed to support informal and income-poor workers, but may have excluded households who were not income-poor before the pandemic yet faced compounded vulnerabilities.\nMy research also builds on empirical evaluations of COVID-era policies. While Galeano and Aquino (2022) find that Pytyvõ increased short-term income for targeted workers, their study does not assess MPI, nor does it evaluate whether the program reached those most deprived along non-monetary dimensions. Similarly, Lustig, Tommasi, et al. (2021) find that pandemic-related income losses were greatest for informal workers across Latin America, but highlight the difficulty of designing emergency programs that effectively target the most vulnerable. Other work suggests that urban households were more likely to access digital services and emergency transfers, contributing to an urban bias in social protection (Gentilini et al. (2020)).\nWhat makes this study distinctive is its focus on multidimensional poverty trajectories using household-level data across eight years (2016–2023). I use interaction models to estimate whether rural and informal households experienced significantly slower improvements during and after the pandemic. I also investigate the mismatch between MPI poverty and income-based targeting, showing how emergency responses may have failed to reach households who were structurally poor but not income-poor. By moving beyond descriptive statistics, I aim to contribute to causal debates on who benefitted from recovery and who was left behind."
+  },
+  {
+    "objectID": "finalproject_2.html#causal-interpretation-and-confounders",
+    "href": "finalproject_2.html#causal-interpretation-and-confounders",
+    "title": "COVID-19, Informality, and Multidimensional Poverty in Paraguay",
+    "section": "Causal Interpretation and Confounders",
+    "text": "Causal Interpretation and Confounders\nThe difference-in-differences interaction term allows me to estimate whether MPI trajectories were significantly different for subgroups, conditional on covariates. A key assumption is parallel trends—MPI would have followed similar patterns in treated and control groups absent COVID. While plausible, unobserved confounders remain a concern, such as:\n\nRegion-specific shocks (e.g., droughts)\nDifferences in local policy implementation\nReporting or measurement bias in certain MPI dimensions\n\nTo mitigate these threats, I would include year and department fixed effects and conduct robustness checks."
+  },
+  {
+    "objectID": "finalproject_2.html#empirical-extension",
+    "href": "finalproject_2.html#empirical-extension",
+    "title": "COVID-19, Informality, and Multidimensional Poverty in Paraguay",
+    "section": "Empirical Extension",
+    "text": "Empirical Extension\nTo improve causal inference, I would restrict the sample to income non-poor households and re-estimate the model. If the same group-specific differences persist among households above the poverty line, this suggests the MPI divergence is not solely driven by Pytyvõ’s targeting of the income-poor. This allows me to test whether MPI trends diverged even within relatively better-off groups, ruling out selection bias into program participation."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]
