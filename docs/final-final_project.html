@@ -4801,6 +4801,7 @@ window.Quarto = {
   <li><a href="#empirical-extension" id="toc-empirical-extension" class="nav-link" data-scroll-target="#empirical-extension">Empirical Extension</a></li>
   </ul></li>
   <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings">Findings</a></li>
+  <li><a href="#empirical-extension-1" id="toc-empirical-extension-1" class="nav-link" data-scroll-target="#empirical-extension-1">Empirical Extension</a></li>
   <li><a href="#discussion-and-policy-implications" id="toc-discussion-and-policy-implications" class="nav-link" data-scroll-target="#discussion-and-policy-implications">Discussion and Policy Implications</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="final-final_project.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -4861,8 +4862,7 @@ window.Quarto = {
 <p>The main explanatory variable is formality, proxied by the binary variable <code>hh_d_no_afil</code>, which equals <code>1</code> if no household member is formally affiliated with the social security system (i.e., informal) and <code>0</code> otherwise. The key interaction is with the variable <code>covid_period</code>, coded as <code>1</code> for 2020–2023 and <code>0</code> for 2016–2019, to estimate differences in poverty trends between formal and informal households during the pandemic and recovery period.</p>
 <section id="dataset-and-limitations" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-and-limitations">Dataset and Limitations</h3>
-<p>The dataset is a merged panel of household-year observations across eight annual waves, with an average of ~10,000 households per year (totaling ~82,000). While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I inspect trends in individual deprivation indicators in addition to the aggregate <code>M0_26</code> score, helping rule out that changes are driven by single-component anomalies.</p>
-<p>Notably, the data show a sharp decline in MPI in 2017 followed by an increase in 2018. These trends are unlikely to reflect real economic reversals and may instead signal shifts in sampling or measurement practices. This is considered when interpreting long-term changes, and robustness checks are applied across multiple waves.</p>
+<p>The dataset is a merged panel of household-year surverys across eight annual waves in Paraguay, with an average of ~10,000 households per year (totaling ~82,000). These surveys are available at the INE (National Institute of Statistics) Paraguay website. While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I skimmed throug the datasets an it doesn’t appear to be any inconsistency, such as many NAs or outliers for certain columns.</p>
 </section>
 <section id="role-of-rurality" class="level3">
 <h3 class="anchored" data-anchor-id="role-of-rurality">Role of Rurality</h3>
@@ -4909,20 +4909,20 @@ window.Quarto = {
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the table</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>yearly_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="umpkdikdvn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#umpkdikdvn table {
+<div id="bkctvokiln" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bkctvokiln table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#umpkdikdvn thead, #umpkdikdvn tbody, #umpkdikdvn tfoot, #umpkdikdvn tr, #umpkdikdvn td, #umpkdikdvn th {
+#bkctvokiln thead, #bkctvokiln tbody, #bkctvokiln tfoot, #bkctvokiln tr, #bkctvokiln td, #bkctvokiln th {
 border-style: none;
 }
-#umpkdikdvn p {
+#bkctvokiln p {
 margin: 0;
 padding: 0;
 }
-#umpkdikdvn .gt_table {
+#bkctvokiln .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4947,11 +4947,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#umpkdikdvn .gt_caption {
+#bkctvokiln .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#umpkdikdvn .gt_title {
+#bkctvokiln .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4962,7 +4962,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#umpkdikdvn .gt_subtitle {
+#bkctvokiln .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4973,7 +4973,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#umpkdikdvn .gt_heading {
+#bkctvokiln .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4984,12 +4984,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#umpkdikdvn .gt_bottom_border {
+#bkctvokiln .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#umpkdikdvn .gt_col_headings {
+#bkctvokiln .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5003,7 +5003,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#umpkdikdvn .gt_col_heading {
+#bkctvokiln .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5022,7 +5022,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#umpkdikdvn .gt_column_spanner_outer {
+#bkctvokiln .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5033,13 +5033,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#umpkdikdvn .gt_column_spanner_outer:first-child {
+#bkctvokiln .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#umpkdikdvn .gt_column_spanner_outer:last-child {
+#bkctvokiln .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#umpkdikdvn .gt_column_spanner {
+#bkctvokiln .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -5050,10 +5050,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#umpkdikdvn .gt_spanner_row {
+#bkctvokiln .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#umpkdikdvn .gt_group_heading {
+#bkctvokiln .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5078,7 +5078,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#umpkdikdvn .gt_empty_group_heading {
+#bkctvokiln .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -5092,13 +5092,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#umpkdikdvn .gt_from_md > :first-child {
+#bkctvokiln .gt_from_md > :first-child {
 margin-top: 0;
 }
-#umpkdikdvn .gt_from_md > :last-child {
+#bkctvokiln .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#umpkdikdvn .gt_row {
+#bkctvokiln .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5116,7 +5116,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#umpkdikdvn .gt_stub {
+#bkctvokiln .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5128,7 +5128,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#umpkdikdvn .gt_stub_row_group {
+#bkctvokiln .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -5141,13 +5141,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#umpkdikdvn .gt_row_group_first td {
+#bkctvokiln .gt_row_group_first td {
 border-top-width: 2px;
 }
-#umpkdikdvn .gt_row_group_first th {
+#bkctvokiln .gt_row_group_first th {
 border-top-width: 2px;
 }
-#umpkdikdvn .gt_summary_row {
+#bkctvokiln .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5156,14 +5156,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#umpkdikdvn .gt_first_summary_row {
+#bkctvokiln .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#umpkdikdvn .gt_first_summary_row.thick {
+#bkctvokiln .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#umpkdikdvn .gt_last_summary_row {
+#bkctvokiln .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5172,7 +5172,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#umpkdikdvn .gt_grand_summary_row {
+#bkctvokiln .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -5181,7 +5181,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#umpkdikdvn .gt_first_grand_summary_row {
+#bkctvokiln .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5190,7 +5190,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#umpkdikdvn .gt_last_grand_summary_row_top {
+#bkctvokiln .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -5199,10 +5199,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#umpkdikdvn .gt_striped {
+#bkctvokiln .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#umpkdikdvn .gt_table_body {
+#bkctvokiln .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -5210,7 +5210,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#umpkdikdvn .gt_footnotes {
+#bkctvokiln .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5223,7 +5223,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#umpkdikdvn .gt_footnote {
+#bkctvokiln .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -5231,7 +5231,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#umpkdikdvn .gt_sourcenotes {
+#bkctvokiln .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -5244,64 +5244,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#umpkdikdvn .gt_sourcenote {
+#bkctvokiln .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#umpkdikdvn .gt_left {
+#bkctvokiln .gt_left {
 text-align: left;
 }
-#umpkdikdvn .gt_center {
+#bkctvokiln .gt_center {
 text-align: center;
 }
-#umpkdikdvn .gt_right {
+#bkctvokiln .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#umpkdikdvn .gt_font_normal {
+#bkctvokiln .gt_font_normal {
 font-weight: normal;
 }
-#umpkdikdvn .gt_font_bold {
+#bkctvokiln .gt_font_bold {
 font-weight: bold;
 }
-#umpkdikdvn .gt_font_italic {
+#bkctvokiln .gt_font_italic {
 font-style: italic;
 }
-#umpkdikdvn .gt_super {
+#bkctvokiln .gt_super {
 font-size: 65%;
 }
-#umpkdikdvn .gt_footnote_marks {
+#bkctvokiln .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#umpkdikdvn .gt_asterisk {
+#bkctvokiln .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#umpkdikdvn .gt_indent_1 {
+#bkctvokiln .gt_indent_1 {
 text-indent: 5px;
 }
-#umpkdikdvn .gt_indent_2 {
+#bkctvokiln .gt_indent_2 {
 text-indent: 10px;
 }
-#umpkdikdvn .gt_indent_3 {
+#bkctvokiln .gt_indent_3 {
 text-indent: 15px;
 }
-#umpkdikdvn .gt_indent_4 {
+#bkctvokiln .gt_indent_4 {
 text-indent: 20px;
 }
-#umpkdikdvn .gt_indent_5 {
+#bkctvokiln .gt_indent_5 {
 text-indent: 25px;
 }
-#umpkdikdvn .katex-display {
+#bkctvokiln .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#umpkdikdvn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bkctvokiln div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -5506,8 +5506,8 @@ height: 0px !important;
 
     <script>
 
-      function styleCell_n5shjbbu7ezvepsyfzw3(i, j, css_id) {
-          var table = document.getElementById("tinytable_n5shjbbu7ezvepsyfzw3");
+      function styleCell_dx2gtnvwn42dibziv5t7(i, j, css_id) {
+          var table = document.getElementById("tinytable_dx2gtnvwn42dibziv5t7");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -5517,7 +5517,7 @@ height: 0px !important;
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_n5shjbbu7ezvepsyfzw3');
+        var table = document.getElementById('tinytable_dx2gtnvwn42dibziv5t7');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -5525,8 +5525,8 @@ height: 0px !important;
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_n5shjbbu7ezvepsyfzw3(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_n5shjbbu7ezvepsyfzw3");
+      function spanCell_dx2gtnvwn42dibziv5t7(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_dx2gtnvwn42dibziv5t7");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -5556,20 +5556,20 @@ height: 0px !important;
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 12, j: 1 }, { i: 9, j: 1 }, { i: 10, j: 1 }, { i: 11, j: 1 }, { i: 13, j: 1 },  ], css_id: 'tinytable_css_pn1uusmbsnnosmk4j52j',}, 
-          { positions: [ { i: 14, j: 1 },  ], css_id: 'tinytable_css_lt44d0rxtcbj7whyejiv',}, 
-          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_heodq0zcqu7k48i482ea',}, 
-          { positions: [ { i: 14, j: 0 },  ], css_id: 'tinytable_css_fn698mhhxvdbeix6rg6r',}, 
-          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 12, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 13, j: 0 },  ], css_id: 'tinytable_css_e3odwm7rswt1gwu6900w',}, 
-          { positions: [ { i: 8, j: 1 },  ], css_id: 'tinytable_css_9k71ld73q4g5vmj5bkgm',}, 
-          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_875adp2kt22bqp4zwb37',}, 
-          { positions: [ { i: 8, j: 0 },  ], css_id: 'tinytable_css_33chru9qnlykiorcan3d',}, 
+          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_xi69t86d8muvzad9miwk',}, 
+          { positions: [ { i: 14, j: 0 },  ], css_id: 'tinytable_css_wp2k48q4t90a6bvk1f6p',}, 
+          { positions: [ { i: 8, j: 1 },  ], css_id: 'tinytable_css_v4my6n79qrfkgpcbh9lk',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 12, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 13, j: 0 },  ], css_id: 'tinytable_css_nmaryn6jyeoqpy9776q9',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_l5cn569vgo4won6vc8gg',}, 
+          { positions: [ { i: 14, j: 1 },  ], css_id: 'tinytable_css_keujokoim1gznmfycxku',}, 
+          { positions: [ { i: 8, j: 0 },  ], css_id: 'tinytable_css_bsejurx3wholroqf5w0j',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 12, j: 1 }, { i: 9, j: 1 }, { i: 10, j: 1 }, { i: 11, j: 1 }, { i: 13, j: 1 },  ], css_id: 'tinytable_css_5sb07yb000jd766tixqk',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_n5shjbbu7ezvepsyfzw3(cell.i, cell.j, group.css_id);
+                  styleCell_dx2gtnvwn42dibziv5t7(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -5577,17 +5577,17 @@ height: 0px !important;
 
     <style>
 
-.table td.tinytable_css_pn1uusmbsnnosmk4j52j, .table th.tinytable_css_pn1uusmbsnnosmk4j52j { text-align: center; }
-.table td.tinytable_css_lt44d0rxtcbj7whyejiv, .table th.tinytable_css_lt44d0rxtcbj7whyejiv { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_heodq0zcqu7k48i482ea, .table th.tinytable_css_heodq0zcqu7k48i482ea { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_fn698mhhxvdbeix6rg6r, .table th.tinytable_css_fn698mhhxvdbeix6rg6r { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_e3odwm7rswt1gwu6900w, .table th.tinytable_css_e3odwm7rswt1gwu6900w { text-align: left; }
-.table td.tinytable_css_9k71ld73q4g5vmj5bkgm, .table th.tinytable_css_9k71ld73q4g5vmj5bkgm { text-align: center; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_875adp2kt22bqp4zwb37, .table th.tinytable_css_875adp2kt22bqp4zwb37 { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_33chru9qnlykiorcan3d, .table th.tinytable_css_33chru9qnlykiorcan3d { text-align: left; border-bottom: solid black 0.05em; }
+.table td.tinytable_css_xi69t86d8muvzad9miwk, .table th.tinytable_css_xi69t86d8muvzad9miwk { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+.table td.tinytable_css_wp2k48q4t90a6bvk1f6p, .table th.tinytable_css_wp2k48q4t90a6bvk1f6p { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+.table td.tinytable_css_v4my6n79qrfkgpcbh9lk, .table th.tinytable_css_v4my6n79qrfkgpcbh9lk { text-align: center; border-bottom: solid black 0.05em; }
+.table td.tinytable_css_nmaryn6jyeoqpy9776q9, .table th.tinytable_css_nmaryn6jyeoqpy9776q9 { text-align: left; }
+.table td.tinytable_css_l5cn569vgo4won6vc8gg, .table th.tinytable_css_l5cn569vgo4won6vc8gg { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+.table td.tinytable_css_keujokoim1gznmfycxku, .table th.tinytable_css_keujokoim1gznmfycxku { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+.table td.tinytable_css_bsejurx3wholroqf5w0j, .table th.tinytable_css_bsejurx3wholroqf5w0j { text-align: left; border-bottom: solid black 0.05em; }
+.table td.tinytable_css_5sb07yb000jd766tixqk, .table th.tinytable_css_5sb07yb000jd766tixqk { text-align: center; }
 </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_n5shjbbu7ezvepsyfzw3" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_dx2gtnvwn42dibziv5t7" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         </thead><caption>Table 2. Main Regression: All Households</caption>
               <tbody><tr>
@@ -5662,7 +5662,10 @@ height: 0px !important;
 <p>Figure 1 presents the share of MPI-poor households over time, disaggregated by formality. While informal households were consistently poorer, their MPI rates declined more sharply post-2020. This descriptive pattern suggests a potential Pytyvõ effect but must be tested statistically.</p>
 <p>The regression results in Table 1 confirm that informal households had significantly higher odds of being multidimensionally poor (OR ≈ 3.01, p &lt; 0.001), supporting Hypothesis 1. However, the interaction term between formality and the COVID-19 period was negative but statistically insignificant (p &gt; 0.05). This means there is no clear evidence that MPI outcomes worsened more for formal households during the pandemic.</p>
 <p>Figure 2 compares income and MPI poverty trends over time. While income poverty dropped dramatically in 2020–2021, MPI poverty fell more gradually. This discrepancy highlights the limits of income-based aid in addressing structural deprivation.</p>
-<p>Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. # Empirical Extension</p>
+<p>Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic.</p>
+</section>
+<section id="empirical-extension-1" class="level1">
+<h1>Empirical Extension</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model_extension <span class="ot">&lt;-</span> <span class="fu">glm</span>(multid_poor_26 <span class="sc">~</span> covid_period <span class="sc">*</span> hh_d_no_afil,</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>),</span>
@@ -5676,8 +5679,8 @@ height: 0px !important;
 
     <script>
 
-      function styleCell_go3utq19ewx4gxm8bajg(i, j, css_id) {
-          var table = document.getElementById("tinytable_go3utq19ewx4gxm8bajg");
+      function styleCell_5f7d93daxqe3n4sbfa0m(i, j, css_id) {
+          var table = document.getElementById("tinytable_5f7d93daxqe3n4sbfa0m");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -5687,7 +5690,7 @@ height: 0px !important;
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_go3utq19ewx4gxm8bajg');
+        var table = document.getElementById('tinytable_5f7d93daxqe3n4sbfa0m');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -5695,8 +5698,8 @@ height: 0px !important;
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_go3utq19ewx4gxm8bajg(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_go3utq19ewx4gxm8bajg");
+      function spanCell_5f7d93daxqe3n4sbfa0m(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_5f7d93daxqe3n4sbfa0m");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -5726,20 +5729,20 @@ height: 0px !important;
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 14, j: 1 },  ], css_id: 'tinytable_css_qp2gfp3xethd0l1fy4y3',}, 
-          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_muu2bjoetmt9zmhlqrui',}, 
-          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 12, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 13, j: 0 },  ], css_id: 'tinytable_css_gwcij7g4r1r287coiamu',}, 
-          { positions: [ { i: 8, j: 1 },  ], css_id: 'tinytable_css_gfbzgm2r4lz9hev06kib',}, 
-          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_d5w312plqfb9sm54k69j',}, 
-          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 12, j: 1 }, { i: 9, j: 1 }, { i: 10, j: 1 }, { i: 11, j: 1 }, { i: 13, j: 1 },  ], css_id: 'tinytable_css_c5vhcnsic3atb688i7cu',}, 
-          { positions: [ { i: 8, j: 0 },  ], css_id: 'tinytable_css_8gzx6mzv08zt9vv6cer1',}, 
-          { positions: [ { i: 14, j: 0 },  ], css_id: 'tinytable_css_7shceflbx5vnt3daprn5',}, 
+          { positions: [ { i: 8, j: 0 },  ], css_id: 'tinytable_css_y0iv4zcdw7jzda1h0evl',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 12, j: 1 }, { i: 9, j: 1 }, { i: 10, j: 1 }, { i: 11, j: 1 }, { i: 13, j: 1 },  ], css_id: 'tinytable_css_tdmwugoltvp6szirbfdl',}, 
+          { positions: [ { i: 8, j: 1 },  ], css_id: 'tinytable_css_mocdt1eqnm5tuywqj38i',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 12, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 13, j: 0 },  ], css_id: 'tinytable_css_khjbdoc1239k9nt0ih6x',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_8zb0ihc24w7dewvptzjl',}, 
+          { positions: [ { i: 14, j: 0 },  ], css_id: 'tinytable_css_4qz2wudiitx1vcaetrnc',}, 
+          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_43dl1xt822ftw6n8c6hq',}, 
+          { positions: [ { i: 14, j: 1 },  ], css_id: 'tinytable_css_0uig3kjubss3r1bgn38r',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_go3utq19ewx4gxm8bajg(cell.i, cell.j, group.css_id);
+                  styleCell_5f7d93daxqe3n4sbfa0m(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -5747,17 +5750,17 @@ height: 0px !important;
 
     <style>
 
-.table td.tinytable_css_qp2gfp3xethd0l1fy4y3, .table th.tinytable_css_qp2gfp3xethd0l1fy4y3 { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_muu2bjoetmt9zmhlqrui, .table th.tinytable_css_muu2bjoetmt9zmhlqrui { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_gwcij7g4r1r287coiamu, .table th.tinytable_css_gwcij7g4r1r287coiamu { text-align: left; }
-.table td.tinytable_css_gfbzgm2r4lz9hev06kib, .table th.tinytable_css_gfbzgm2r4lz9hev06kib { text-align: center; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_d5w312plqfb9sm54k69j, .table th.tinytable_css_d5w312plqfb9sm54k69j { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_c5vhcnsic3atb688i7cu, .table th.tinytable_css_c5vhcnsic3atb688i7cu { text-align: center; }
-.table td.tinytable_css_8gzx6mzv08zt9vv6cer1, .table th.tinytable_css_8gzx6mzv08zt9vv6cer1 { text-align: left; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_7shceflbx5vnt3daprn5, .table th.tinytable_css_7shceflbx5vnt3daprn5 { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+.table td.tinytable_css_y0iv4zcdw7jzda1h0evl, .table th.tinytable_css_y0iv4zcdw7jzda1h0evl { text-align: left; border-bottom: solid black 0.05em; }
+.table td.tinytable_css_tdmwugoltvp6szirbfdl, .table th.tinytable_css_tdmwugoltvp6szirbfdl { text-align: center; }
+.table td.tinytable_css_mocdt1eqnm5tuywqj38i, .table th.tinytable_css_mocdt1eqnm5tuywqj38i { text-align: center; border-bottom: solid black 0.05em; }
+.table td.tinytable_css_khjbdoc1239k9nt0ih6x, .table th.tinytable_css_khjbdoc1239k9nt0ih6x { text-align: left; }
+.table td.tinytable_css_8zb0ihc24w7dewvptzjl, .table th.tinytable_css_8zb0ihc24w7dewvptzjl { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+.table td.tinytable_css_4qz2wudiitx1vcaetrnc, .table th.tinytable_css_4qz2wudiitx1vcaetrnc { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+.table td.tinytable_css_43dl1xt822ftw6n8c6hq, .table th.tinytable_css_43dl1xt822ftw6n8c6hq { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+.table td.tinytable_css_0uig3kjubss3r1bgn38r, .table th.tinytable_css_0uig3kjubss3r1bgn38r { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
 </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_go3utq19ewx4gxm8bajg" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_5f7d93daxqe3n4sbfa0m" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         </thead><caption>Table 3. Empirical Extension: Non-Income-Poor Only</caption>
               <tbody><tr>
@@ -6407,57 +6410,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="fu">### Dataset and Limitations</span></span>
 <span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>The dataset is a merged panel of household-year observations across eight annual waves, with an average of \~10,000 households per year (totaling \~82,000). While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I inspect trends in individual deprivation indicators in addition to the aggregate <span class="in">`M0_26`</span> score, helping rule out that changes are driven by single-component anomalies.</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>The dataset is a merged panel of household-year surverys across eight annual waves in Paraguay, with an average of \~10,000 households per year (totaling \~82,000). These surveys are available at the INE (National Institute of Statistics) Paraguay website. While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I skimmed throug the datasets an it doesn&#39;t appear to be any inconsistency, such as many NAs or outliers for certain columns.</span>
 <span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>Notably, the data show a sharp decline in MPI in 2017 followed by an increase in 2018. These trends are unlikely to reflect real economic reversals and may instead signal shifts in sampling or measurement practices. This is considered when interpreting long-term changes, and robustness checks are applied across multiple waves.</span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a><span class="fu">### Role of Rurality</span></span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>This analysis is centered on program eligibility. While urban-rural differences are relevant to understanding structural inequality, they are not predictive of Pytyvõ receipt, as I had thought initially. A test of the empirical correlation between informality (<span class="in">`hh_d_no_afil`</span>) and rural residence (<span class="in">`area`</span>) yields only 0.087, indicating that rural households were only marginally more likely to be informal. As a result, I decided to not have rural/urban classifications as a causal proxy for program targeting.</span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>fullmerge <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;/Users/mariaguadalupesolaecheamadeo/MPI_merged_2016_2023.csv&quot;</span>,  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>correlation_df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(<span class="fu">data.frame</span>(</span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>  <span class="at">informal =</span> fullmerge<span class="sc">$</span>hh_d_no_afil,              <span class="co"># 1 if informal, 0 if formal</span></span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>  <span class="at">rural =</span> <span class="fu">ifelse</span>(fullmerge<span class="sc">$</span>area <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>)       <span class="co"># 1 if rural, 0 if urban</span></span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>cor <span class="ot">&lt;-</span> <span class="fu">cor</span>(correlation_df<span class="sc">$</span>informal, correlation_df<span class="sc">$</span>rural, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Output result</span></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Correlation between informality and rural area:&quot;</span>, <span class="fu">round</span>(cor, <span class="dv">3</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>Instead, I treat formality as a proxy for program exclusion: households with social security affiliation were ineligible for Pytyvõ, regardless of income or geography. Thus, any widening gap in MPI during the COVID period between formal and informal households may reflect the consequences of exclusion from targeted assistance.</span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summary Statistics</span></span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics grouped by year</span></span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>yearly_summary <span class="ot">&lt;-</span> fullmerge <span class="sc">%&gt;%</span></span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>    <span class="at">Observations =</span> <span class="fu">n</span>(),</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean MPI (M0_26)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(M0_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">SD of MPI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sd</span>(M0_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share MPI-Poor</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(multid_poor_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Informal</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(hh_d_no_afil, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Rural</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(area <span class="sc">==</span> <span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Income Poor</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(pobnopoi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Table 1: Summary Statistics by Year&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_percent</span>(</span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">Share MPI-Poor</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Informal</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Rural</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Income Poor</span><span class="st">`</span>),</span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">1</span></span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the table</span></span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>yearly_summary</span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>Multidimensional poverty has shown a general downward trend, with the share of MPI-poor households decreasing from 32.7% in 2016 to 17.0% in 2023. The mean MPI score also declined over the period, from 0.14 to approximately 0.06. These improvements suggest broad gains in living standards, though year-to-year variation—particularly the abrupt drop in 2017—could reflect methodological changes or sampling shifts in the survey rather than real economic change.</span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="fu">### Role of Rurality</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>This analysis is centered on program eligibility. While urban-rural differences are relevant to understanding structural inequality, they are not predictive of Pytyvõ receipt, as I had thought initially. A test of the empirical correlation between informality (<span class="in">`hh_d_no_afil`</span>) and rural residence (<span class="in">`area`</span>) yields only 0.087, indicating that rural households were only marginally more likely to be informal. As a result, I decided to not have rural/urban classifications as a causal proxy for program targeting.</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>fullmerge <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;/Users/mariaguadalupesolaecheamadeo/MPI_merged_2016_2023.csv&quot;</span>,  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>correlation_df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(<span class="fu">data.frame</span>(</span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>  <span class="at">informal =</span> fullmerge<span class="sc">$</span>hh_d_no_afil,              <span class="co"># 1 if informal, 0 if formal</span></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>  <span class="at">rural =</span> <span class="fu">ifelse</span>(fullmerge<span class="sc">$</span>area <span class="sc">==</span> <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>)       <span class="co"># 1 if rural, 0 if urban</span></span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>cor <span class="ot">&lt;-</span> <span class="fu">cor</span>(correlation_df<span class="sc">$</span>informal, correlation_df<span class="sc">$</span>rural, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Output result</span></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Correlation between informality and rural area:&quot;</span>, <span class="fu">round</span>(cor, <span class="dv">3</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>Instead, I treat formality as a proxy for program exclusion: households with social security affiliation were ineligible for Pytyvõ, regardless of income or geography. Thus, any widening gap in MPI during the COVID period between formal and informal households may reflect the consequences of exclusion from targeted assistance.</span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summary Statistics</span></span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics grouped by year</span></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>yearly_summary <span class="ot">&lt;-</span> fullmerge <span class="sc">%&gt;%</span></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>    <span class="at">Observations =</span> <span class="fu">n</span>(),</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean MPI (M0_26)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(M0_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">SD of MPI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sd</span>(M0_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share MPI-Poor</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(multid_poor_26, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Informal</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(hh_d_no_afil, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Rural</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(area <span class="sc">==</span> <span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share Income Poor</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(pobnopoi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Table 1: Summary Statistics by Year&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_percent</span>(</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">Share MPI-Poor</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Informal</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Rural</span><span class="st">`</span>, <span class="st">`</span><span class="at">Share Income Poor</span><span class="st">`</span>),</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">1</span></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the table</span></span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>yearly_summary</span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>Multidimensional poverty has shown a general downward trend, with the share of MPI-poor households decreasing from 32.7% in 2016 to 17.0% in 2023. The mean MPI score also declined over the period, from 0.14 to approximately 0.06. These improvements suggest broad gains in living standards, though year-to-year variation—particularly the abrupt drop in 2017—could reflect methodological changes or sampling shifts in the survey rather than real economic change.</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>Informality remained high throughout, averaging above 70%, and showing little variation across years. This underscores the structural nature of informal labor in Paraguay and supports its use as a proxy for Pytyvõ eligibility. Meanwhile, the rural share of the sample stayed relatively stable (around 44–48%), reinforcing that rurality and informality are not strongly correlated in this context. This weak correlation (ρ = 0.087) was confirmed empirically, and while rural status is included in regressions for robustness, it is not used as a proxy for Pytyvõ targeting.</span>
 <span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a></span>
@@ -6552,36 +6555,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a>Figure 2 compares income and MPI poverty trends over time. While income poverty dropped dramatically in 2020–2021, MPI poverty fell more gradually. This discrepancy highlights the limits of income-based aid in addressing structural deprivation.</span>
 <span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. <span class="sc">\#</span> Empirical Extension</span>
+<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. </span>
 <span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a>model_extension <span class="ot">&lt;-</span> <span class="fu">glm</span>(multid_poor_26 <span class="sc">~</span> covid_period <span class="sc">*</span> hh_d_no_afil,</span>
-<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a>                       <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>),</span>
-<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data =</span> fullmerge <span class="sc">%&gt;%</span> <span class="fu">filter</span>(pobnopoi <span class="sc">==</span> <span class="dv">0</span>))</span>
-<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(model_extension,</span>
-<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a>             <span class="at">fmt =</span> <span class="dv">3</span>, <span class="at">stars =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a>             <span class="at">title =</span> <span class="st">&quot;Table 3. Empirical Extension: Non-Income-Poor Only&quot;</span>)</span>
-<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a><span class="fu"># Empirical Extension</span></span>
+<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a>model_extension <span class="ot">&lt;-</span> <span class="fu">glm</span>(multid_poor_26 <span class="sc">~</span> covid_period <span class="sc">*</span> hh_d_no_afil,</span>
+<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a>                       <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>),</span>
+<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data =</span> fullmerge <span class="sc">%&gt;%</span> <span class="fu">filter</span>(pobnopoi <span class="sc">==</span> <span class="dv">0</span>))</span>
+<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(model_extension,</span>
+<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a>             <span class="at">fmt =</span> <span class="dv">3</span>, <span class="at">stars =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a>             <span class="at">title =</span> <span class="st">&quot;Table 3. Empirical Extension: Non-Income-Poor Only&quot;</span>)</span>
 <span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a>To further assess the effectiveness of the Pytyvõ program in reducing structural poverty, I restrict the analysis to households that were not income poor (pobnopoi == 0). This subgroup allows us to test whether Pytyvõ had meaningful impacts on multidimensional poverty (MPI) for informal workers who might have been excluded from traditional income-based poverty classifications but were still eligible for the transfer. Since Pytyvõ targeted employment informality rather than income level, many informal households with incomes just above the poverty line may have still experienced deprivations in education, housing, or access to basic services—dimensions captured by the MPI.</span>
+<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a>This approach addresses a key policy concern: whether emergency transfers improve structural well-being for recipients outside the usual scope of income-based programs. If Pytyvõ effectively reached these households, I would expect informal workers to experience greater reductions in MPI poverty relative to formal workers during the COVID period, even when excluding the income poor.</span>
+<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a>To further assess the effectiveness of the Pytyvõ program in reducing structural poverty, I restrict the analysis to households that were not income poor (pobnopoi == 0). This subgroup allows us to test whether Pytyvõ had meaningful impacts on multidimensional poverty (MPI) for informal workers who might have been excluded from traditional income-based poverty classifications but were still eligible for the transfer. Since Pytyvõ targeted employment informality rather than income level, many informal households with incomes just above the poverty line may have still experienced deprivations in education, housing, or access to basic services—dimensions captured by the MPI.</span>
 <span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>However, the results from this restricted regression show no statistically significant interaction effect between COVID and informality (β = -0.037, p <span class="sc">\&gt;</span> 0.1). While informal workers in this subgroup still faced higher baseline odds of being MPI poor (β = 1.013, p <span class="sc">\&lt;</span> 0.001), the pandemic period did not lead to differential improvements. This suggests that Pytyvõ may not have been sufficient to reduce broader deprivations, even among those it successfully targeted.</span>
+<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>This approach addresses a key policy concern: whether emergency transfers improve structural well-being for recipients outside the usual scope of income-based programs. If Pytyvõ effectively reached these households, I would expect informal workers to experience greater reductions in MPI poverty relative to formal workers during the COVID period, even when excluding the income poor.</span>
 <span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>These findings reinforce the need for multidimensional targeting criteria in future transfer programs, as reliance solely on informality may fail to address underlying inequalities not captured by income or employment status alone.</span>
+<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>However, the results from this restricted regression show no statistically significant interaction effect between COVID and informality (β = -0.037, p <span class="sc">\&gt;</span> 0.1). While informal workers in this subgroup still faced higher baseline odds of being MPI poor (β = 1.013, p <span class="sc">\&lt;</span> 0.001), the pandemic period did not lead to differential improvements. This suggests that Pytyvõ may not have been sufficient to reduce broader deprivations, even among those it successfully targeted.</span>
 <span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion and Policy Implications</span></span>
+<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a>These findings reinforce the need for multidimensional targeting criteria in future transfer programs, as reliance solely on informality may fail to address underlying inequalities not captured by income or employment status alone.</span>
 <span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a>These findings underscore the persistent structural disadvantages faced by informal households in Paraguay. The strong association between informality and multidimensional poverty supports Hypothesis 1 and reinforces existing literature: informal workers lack job security, health coverage, and stable income, leaving them more vulnerable.</span>
+<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a><span class="fu"># Discussion and Policy Implications</span></span>
 <span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a>However, Hypothesis 2 is not supported. The interaction term between COVID-19 and formality was not statistically significant, suggesting that the pandemic did not disproportionately worsen MPI outcomes for formal vs. informal households. This could indicate that Pytyvõ provided some temporary mitigation for informal workers or that the pandemic’s impact was more evenly distributed.</span>
+<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a>These findings underscore the persistent structural disadvantages faced by informal households in Paraguay. The strong association between informality and multidimensional poverty supports Hypothesis 1 and reinforces existing literature: informal workers lack job security, health coverage, and stable income, leaving them more vulnerable.</span>
 <span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a>Policy implications are twofold. First, informal employment must be addressed not only through labor formalization but by expanding coverage of social protections—such as non-contributory pensions and health insurance—to informal earners. Second, MPI indicators should complement income measures in targeting aid. As Figure 2 shows, income-based programs like Pytyvõ may miss broader deprivations that remain even when incomes rise.</span>
+<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a>However, Hypothesis 2 is not supported. The interaction term between COVID-19 and formality was not statistically significant, suggesting that the pandemic did not disproportionately worsen MPI outcomes for formal vs. informal households. This could indicate that Pytyvõ provided some temporary mitigation for informal workers or that the pandemic’s impact was more evenly distributed.</span>
 <span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a>In short, my findings suggest that while income transfers may buffer short-term income shocks, they are insufficient to reduce multidimensional poverty unless accompanied by deeper reforms in service access, job quality, and protection for the informal sector.</span>
+<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a>Policy implications are twofold. First, informal employment must be addressed not only through labor formalization but by expanding coverage of social protections—such as non-contributory pensions and health insurance—to informal earners. Second, MPI indicators should complement income measures in targeting aid. As Figure 2 shows, income-based programs like Pytyvõ may miss broader deprivations that remain even when incomes rise.</span>
+<span id="cb8-262"><a href="#cb8-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a>In short, my findings suggest that while income transfers may buffer short-term income shocks, they are insufficient to reduce multidimensional poverty unless accompanied by deeper reforms in service access, job quality, and protection for the informal sector.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

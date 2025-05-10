@@ -72,9 +72,8 @@ The main explanatory variable is formality, proxied by the binary variable `hh_d
 
 ### Dataset and Limitations
 
-The dataset is a merged panel of household-year observations across eight annual waves, with an average of \~10,000 households per year (totaling \~82,000). While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I inspect trends in individual deprivation indicators in addition to the aggregate `M0_26` score, helping rule out that changes are driven by single-component anomalies.
+The dataset is a merged panel of household-year surverys across eight annual waves in Paraguay, with an average of \~10,000 households per year (totaling \~82,000). These surveys are available at the INE (National Institute of Statistics) Paraguay website. While the MPI index is available consistently across years, documentation on the exact construction of the index and sampling protocols is limited. Variable naming conventions suggest consistent methodology, but slight changes in indicator definitions or weighting over time remain possible. To address this, I skimmed throug the datasets an it doesn't appear to be any inconsistency, such as many NAs or outliers for certain columns.
 
-Notably, the data show a sharp decline in MPI in 2017 followed by an increase in 2018. These trends are unlikely to reflect real economic reversals and may instead signal shifts in sampling or measurement practices. This is considered when interpreting long-term changes, and robustness checks are applied across multiple waves.
 
 ### Role of Rurality
 
@@ -123,6 +122,7 @@ yearly_summary
 ```
 
 Multidimensional poverty has shown a general downward trend, with the share of MPI-poor households decreasing from 32.7% in 2016 to 17.0% in 2023. The mean MPI score also declined over the period, from 0.14 to approximately 0.06. These improvements suggest broad gains in living standards, though year-to-year variation—particularly the abrupt drop in 2017—could reflect methodological changes or sampling shifts in the survey rather than real economic change.
+
 
 Informality remained high throughout, averaging above 70%, and showing little variation across years. This underscores the structural nature of informal labor in Paraguay and supports its use as a proxy for Pytyvõ eligibility. Meanwhile, the rural share of the sample stayed relatively stable (around 44–48%), reinforcing that rurality and informality are not strongly correlated in this context. This weak correlation (ρ = 0.087) was confirmed empirically, and while rural status is included in regressions for robustness, it is not used as a proxy for Pytyvõ targeting.
 
@@ -217,7 +217,9 @@ The regression results in Table 1 confirm that informal households had significa
 
 Figure 2 compares income and MPI poverty trends over time. While income poverty dropped dramatically in 2020–2021, MPI poverty fell more gradually. This discrepancy highlights the limits of income-based aid in addressing structural deprivation.
 
-Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. \# Empirical Extension
+Overall, the results support Hypothesis 1 in showing a strong baseline disadvantage for informal households. However, they do not support Hypothesis 2: there was no statistically significant differential change in MPI outcomes for informal households during the pandemic. 
+
+# Empirical Extension
 
 ```{r}
 model_extension <- glm(multid_poor_26 ~ covid_period * hh_d_no_afil,
